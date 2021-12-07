@@ -1,62 +1,322 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-    <title>Article</title>
-    <meta charset="UTF-8" />
-    <meta id="twitter-theme" name="twitter:widgets:theme" content="light">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
-    <link rel="stylesheet" type="text/css" media="all" id="fontStyles" href="__TEMPLATES_DIRECTORY__assets/css/fonts-__PLATFORM__.css" />
-    <link rel="stylesheet" type="text/css" media="all" href="__TEMPLATES_DIRECTORY__assets/css/style-sync.css" />
-    <style>/* <-- */
-        __ATOMS_CSS__
-    /* --> */</style>
-    <script type="text/javascript">
-        window.GU = window.GU || {};
-    </script>
-    <script src="__TEMPLATES_DIRECTORY__assets/build/classlist-polyfill/index.js"></script>
-    <script type="text/javascript" src="__TEMPLATES_DIRECTORY__assets/build/curl.js"></script>
-    <script type="text/javascript" src="__TEMPLATES_DIRECTORY__assets/build/boot.js"></script>
-    <script type="text/javascript">
-        window.require = curl || {};
-    </script>
-</head>
-<body class="garnett--type-__GARNETT_TYPE__ garnett--pillar-__GARNETT_PILLAR__ tone--__SECTION_TONE__ __FONT_SIZE__ __LINE_HEIGHT__ __PLATFORM__ __IS_OFFLINE__ advert-config--__ADS_CONFIG__ __IS_ADVERTISING__ __DISPLAY_HINT__ dark-mode-__DARK_MODE__" data-content-type="article" data-ads-enabled="__ADS_ENABLED__" data-ads-enable-hiding="__ADS_ENABLE_HIDING__" data-ads-config="__ADS_CONFIG__" style="margin-top: __ACTIONBARHEIGHT__px;" data-font-size="__FONT_SIZE_INT__" data-template-directory="__TEMPLATES_DIRECTORY__" data-page-id="__PAGE_ID__" data-mpu-after-paragraphs="__MPU_AFTER_PARAGRAPHS__" data-use-ads-ready="__ADS_FAST_CALLBACK__" data-content-section="__SECTION__">
+    <head>
+        <title>Article</title>
+        <meta charset="UTF-8" />
+        <meta id="twitter-theme" name="twitter:widgets:theme" content="light" />
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="all"
+            id="fontStyles"
+            href="__TEMPLATES_DIRECTORY__assets/css/fonts-__PLATFORM__.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="all"
+            href="__TEMPLATES_DIRECTORY__assets/css/style-sync.css"
+        />
+        <style>
+            /* <-- */
+                    __ATOMS_CSS__
+                /* --> */
+        </style>
+        <script type="text/javascript">
+            window.GU = window.GU || {};
+        </script>
+        <script src="__TEMPLATES_DIRECTORY__assets/build/classlist-polyfill/index.js"></script>
+        <script
+            type="text/javascript"
+            src="__TEMPLATES_DIRECTORY__assets/build/curl.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="__TEMPLATES_DIRECTORY__assets/build/boot.js"
+        ></script>
+        <script type="text/javascript">
+            window.require = curl || {};
+        </script>
+    </head>
+    <body
+        class="garnett--type-__GARNETT_TYPE__ garnett--pillar-__GARNETT_PILLAR__ tone--__SECTION_TONE__ __FONT_SIZE__ __LINE_HEIGHT__ __PLATFORM__ __IS_OFFLINE__ advert-config--__ADS_CONFIG__ __IS_ADVERTISING__ __DISPLAY_HINT__ dark-mode-__DARK_MODE__"
+        data-content-type="article"
+        data-ads-enabled="__ADS_ENABLED__"
+        data-ads-enable-hiding="__ADS_ENABLE_HIDING__"
+        data-ads-config="__ADS_CONFIG__"
+        style="margin-top: __ACTIONBARHEIGHT__px"
+        data-font-size="__FONT_SIZE_INT__"
+        data-template-directory="__TEMPLATES_DIRECTORY__"
+        data-page-id="__PAGE_ID__"
+        data-mpu-after-paragraphs="__MPU_AFTER_PARAGRAPHS__"
+        data-use-ads-ready="__ADS_FAST_CALLBACK__"
+        data-content-section="__SECTION__"
+    >
+        __ARTICLE_CONTAINER__
 
-    __ARTICLE_CONTAINER__
+        <div>
+            <style>
+                body,
+                html {
+                    margin: 0;
+                    font-family: "Guardian Text Sans Web";
+                    -webkit-font-smoothing: antialiased;
+                    background: transparent;
+                }
 
-    <script type="text/javascript">
-    (function () {
-        var atoms = {};
-        function readAtoms() {
-            __ATOMS_JS__
-        }
-        readAtoms.call(atoms);
-        GU.bootstrap.init({
-            asyncStylesFilename: "style-async",
-            sectionTone: "__SECTION_TONE__",
-            isAdvertising: "__IS_ADVERTISING__" ? true : false,
-            fontSize: "__FONT_SIZE__",
-            platform: "__PLATFORM__",
-            isOffline: "__IS_OFFLINE__" ? true : false,
-            contentType: "article",
-            adsEnabled: "__ADS_ENABLED__",
-            adsEnableHiding: "__ADS_ENABLE_HIDING__" === "true",
-            adsConfig: "__ADS_CONFIG__",
-            actionBarHeight: "__ACTIONBARHEIGHT__",
-            fontSizeInt: "__FONT_SIZE_INT__",
-            templatesDirectory: "__TEMPLATES_DIRECTORY__",
-            pageId: "__PAGE_ID__",
-            mpuAfterParagraphs: "__MPU_AFTER_PARAGRAPHS__",
-            useAdsReady: "__ADS_FAST_CALLBACK__" === "true",
-            section: "__SECTION__",
-            tests: '__TEST_SPEC__',
-            nativeYoutubeEnabled: "__NATIVE_YOUTUBE_ENABLED__" === "true" ? true : false,
-            disableEnhancedTweets: "__DISABLE_ENHANCED_TWEETS__" === "true" ? true : false,
-            atoms: atoms,
-            hasEpic: "__HAS_EPIC__" === "true",
-            campaignsUrl: "__CAMPAIGNS_URL__"
-        });
-    }());
-    </script>
-</body>
+                * {
+                    box-sizing: border-box;
+                }
+
+                a {
+                    text-decoration: none;
+                }
+
+                .wrapper {
+                    position: relative;
+                    border-top: 1px solid #dcdcdc;
+                    border-bottom: 1px solid #dcdcdc;
+                    max-width: 620px;
+                    margin: 5px;
+                }
+
+                .wrapper--tint {
+                    background-color: #fef9f5;
+                }
+
+                .header {
+                    padding-top: 3px;
+                }
+
+                .title {
+                    font-family: "Guardian Egyptian Web";
+                    font-size: 20px;
+                    line-height: 1.2;
+                    font-weight: bold;
+                    margin: 0;
+                }
+                @media (min-width: 15em) {
+                    .title {
+                        font-size: 24px;
+                    }
+                }
+
+                .content {
+                    position: relative;
+                    color: #121212;
+                    font-family: "Guardian Sans Web";
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 1.3;
+                    padding: 5px 0;
+                }
+                @media (min-width: 15em) {
+                    .content {
+                        font-size: 16px;
+                    }
+                }
+
+                a.button {
+                    background-color: #121212;
+                    position: relative;
+                    display: inline-block;
+                    font-family: "Guardian Sans Web";
+                    font-size: 16px;
+                    color: #fff;
+                    padding: 6px 32px 6px 12px;
+                    border-radius: 32px;
+                    transition: background 0.4s ease-out;
+                    cursor: pointer;
+                    margin-bottom: 10px;
+                    margin-top: 10px;
+                }
+                @media (min-width: 15em) {
+                    a.button {
+                        font-size: 16px;
+                    }
+                }
+                a.button:hover {
+                    text-decoration: none;
+                    background-position: right center;
+                }
+                a.button:hover svg {
+                    transform: translateX(2px);
+                }
+
+                .button svg {
+                    position: absolute;
+                    right: 4px;
+                    top: 0;
+                    bottom: 0;
+                    height: 100%;
+                    fill: #ffffff;
+                    transition: transform 0.4s ease-out;
+                }
+
+                .button svg path {
+                    fill: #ffffff;
+                }
+
+                .wrapper--news .title {
+                    color: #c70000;
+                }
+
+                .wrapper--news .title:hover {
+                    color: #ae0000;
+                }
+
+                .wrapper--news .button {
+                    background-color: #c70000;
+                }
+                .wrapper--news .button:hover {
+                    background-color: #ae0000;
+                }
+
+                .wrapper--opinion .title {
+                    color: #e05e00;
+                }
+
+                .wrapper--opinion .title:hover {
+                    color: #c75300;
+                }
+
+                .wrapper--opinion .button {
+                    background-color: #e05e00;
+                }
+                .wrapper--opinion .button:hover {
+                    background-color: #c75300;
+                }
+
+                .wrapper--sport .title {
+                    color: #0084c6;
+                }
+
+                .wrapper--sport .title:hover {
+                    color: #0073ad;
+                }
+
+                .wrapper--sport .button {
+                    background-color: #0084c6;
+                }
+                .wrapper--sport .button:hover {
+                    background-color: #0073ad;
+                }
+
+                .wrapper--arts .title {
+                    color: #a1845c;
+                }
+
+                .wrapper--arts .title:hover {
+                    color: #917753;
+                }
+
+                .wrapper--arts .button {
+                    background-color: #a1845c;
+                }
+                .wrapper--arts .button:hover {
+                    background-color: #917753;
+                }
+
+                .wrapper--lifestyle .title {
+                    color: #bb3b80;
+                }
+
+                .wrapper--lifestyle .title:hover {
+                    color: #a83573;
+                }
+
+                .wrapper--lifestyle .button {
+                    background-color: #bb3b80;
+                }
+                .wrapper--lifestyle .button:hover {
+                    background-color: #a83573;
+                }
+
+                .wrapper--commercial .title {
+                    color: #42c5bc;
+                }
+
+                .wrapper--commercial .title:hover {
+                    color: #38b6ad;
+                }
+
+                .wrapper--commercial .button {
+                    background-color: #42c5bc;
+                }
+                .wrapper--commercial .button:hover {
+                    background-color: #38b6ad;
+                }
+            </style>
+            <div
+                class="wrapper wrapper--news {{#if opinion-tint}}wrapper--tint{{/if}}"
+            >
+                <div class="header">
+                    <h2 class="title">Get in touch</h2>
+                </div>
+                <div class="content">
+                    The Guardian has partnered with the University of Cambridge
+                    to make a more convenient and secure way of contacting our
+                    journalists. If you have information relating to this story
+                    you can try it out with the button below or read
+                    <a
+                        style="color: #ab0613"
+                        href="https://www.theguardian.com/help/ng-interactive/2017/mar/17/contact-the-guardian-securely"
+                        >our guide</a
+                    >
+                    on how to contact us by other means.
+                </div>
+
+                <a class="button" target="_parent" href="x-gu://coverdrop"
+                    >Contact us on CoverDrop
+                    <svg
+                        class="uit-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 50 50"
+                    >
+                        <path
+                            d="M38.65 25.58L37 27.21 26.79 37.44l-1.1-1.11 8.53-10.19H12.5v-2.28h21.72l-8.53-10.19 1.1-1.1L37 22.79l1.63 1.63v1.16z"
+                        />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            (function () {
+                var atoms = {};
+                function readAtoms() {
+                    __ATOMS_JS__;
+                }
+                readAtoms.call(atoms);
+                GU.bootstrap.init({
+                    asyncStylesFilename: "style-async",
+                    sectionTone: "__SECTION_TONE__",
+                    isAdvertising: "__IS_ADVERTISING__" ? true : false,
+                    fontSize: "__FONT_SIZE__",
+                    platform: "__PLATFORM__",
+                    isOffline: "__IS_OFFLINE__" ? true : false,
+                    contentType: "article",
+                    adsEnabled: "__ADS_ENABLED__",
+                    adsEnableHiding: "__ADS_ENABLE_HIDING__" === "true",
+                    adsConfig: "__ADS_CONFIG__",
+                    actionBarHeight: "__ACTIONBARHEIGHT__",
+                    fontSizeInt: "__FONT_SIZE_INT__",
+                    templatesDirectory: "__TEMPLATES_DIRECTORY__",
+                    pageId: "__PAGE_ID__",
+                    mpuAfterParagraphs: "__MPU_AFTER_PARAGRAPHS__",
+                    useAdsReady: "__ADS_FAST_CALLBACK__" === "true",
+                    section: "__SECTION__",
+                    tests: "__TEST_SPEC__",
+                    nativeYoutubeEnabled:
+                        "__NATIVE_YOUTUBE_ENABLED__" === "true" ? true : false,
+                    disableEnhancedTweets:
+                        "__DISABLE_ENHANCED_TWEETS__" === "true" ? true : false,
+                    atoms: atoms,
+                    hasEpic: "__HAS_EPIC__" === "true",
+                    campaignsUrl: "__CAMPAIGNS_URL__",
+                });
+            })();
+        </script>
+    </body>
 </html>
